@@ -381,6 +381,10 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
