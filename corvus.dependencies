@@ -1,10 +1,14 @@
 [
   {
     "repository":  "kernel_asus_X00P",
-    "target_path": "kernel/asus/X00P"
+    "target_path": "kernel/asus/X00P",
+    "branch": "10",
+    "remote": "github"
   },
   {
     "repository":  "vendor_asus_X00P",
-    "target_path": "vendor/asus"
+    "target_path": "vendor/asus",
+    "branch": "10",
+    "remote": "github"
   }
 ]
