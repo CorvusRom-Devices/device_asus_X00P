@@ -7,7 +7,7 @@
   },
   {
     "repository":  "vendor_asus_X00P",
-    "target_path": "vendor/asus",
+    "target_path": "vendor/asus/X00P",
     "branch": "10",
     "remote": "github"
   }
