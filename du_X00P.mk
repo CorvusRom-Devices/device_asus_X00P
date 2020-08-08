@@ -30,7 +30,6 @@ DU_BUILD_TYPE := OFFICIAL
 
 # Inherit from X00P device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
-$(call inherit-product, device/corvus/CorvusParts/corvusparts.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00P

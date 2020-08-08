@@ -1,14 +1,14 @@
 [
   {
-    "repository":  "kernel_asus_X00P",
+    "repository" :  "CorvusRom-Devices/kernel_asus_X00P",
     "target_path": "kernel/asus/X00P",
-    "branch": "10",
-    "remote": "github"
+    "branch"     : "10",
+    "remote"     : "github"
   },
   {
-    "repository":  "vendor_asus_X00P",
+    "repository" :  "CorvusRom-Devices/vendor_asus_X00P",
     "target_path": "vendor/asus/X00P",
-    "branch": "10",
-    "remote": "github"
+    "branch"     : "10",
+    "remote"     : "github"
   }
 ]
