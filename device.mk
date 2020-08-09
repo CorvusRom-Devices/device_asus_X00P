@@ -304,7 +304,8 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.asus-libperfmgr \
-    android.hardware.power.stats@1.0-service.pixel
+    android.hardware.power.stats@1.0-service.asus
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
     
