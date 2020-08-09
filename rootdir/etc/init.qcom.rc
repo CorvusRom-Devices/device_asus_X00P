@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2019, The Linux Foundation. All rights reserved.
+ # Copyright (c) 2009-2012, 2014-2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -106,6 +106,38 @@ on boot
     chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
     chown system system /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/enable_dt2w
     chmod 0664 /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/enable_dt2w
+    
+        # Enable bus-dcvs
+    write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,cpubw/polling_interval 50
+    write /sys/class/devfreq/soc:qcom,cpubw/min_freq 762 
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/mbps_zones "1525 3143 5859 7759 9887 10327 11863 13763"
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 85
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory 20
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length 0
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/guard_band_mbps 0
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/up_scale 250
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/idle_mbps 1600
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/down_thres 80
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/low_power_celi_mbps 0
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/low_power_io_percent 34
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/low_power_delay 20
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/bw_step 50
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/decay_rate 100
+
+    write /sys/class/devfreq/soc:qcom,llccbw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,llccbw/polling_interval 40
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/mbps_zones "1144 1720 2086 2929 3879 5931 6881"
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/io_percent 68
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/hist_memory 20
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/hyst_length 0
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/guard_band_mbps 0
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/up_scale 250
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/idle_mbps 1600
+    write /sys/class/devfreq/soc:qcom,llccbw/bw_hwmon/down_thres 80
+    
       
     # KCAL permissions
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal
