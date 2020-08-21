@@ -42,6 +42,9 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
     
         // Ambient
         context.startService(new Intent(context, SensorsDozeService.class));
+        
+        //Dirac
+        context.startService(new Intent(context, DiracService.class));
     
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 

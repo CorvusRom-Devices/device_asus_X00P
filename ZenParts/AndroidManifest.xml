@@ -162,7 +162,11 @@
             <intent-filter>
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
-
+         <service
+            android:name=".DiracService"
+            android:enabled="true"
+            android:stopWithTask="false" />
+            
         <service
             android:name=".DiracTileService"
             android:icon="@drawable/dirac_qs_tile_icon"
